@@ -2,20 +2,42 @@
 <html>
 <head>
         <title>???</title>
-        <bgsound src="sample.mid" loop="infinite">
 </head>
-<body>
+<body bgcolor="#10100E" text="#cccccc">
         <h1>WELCOME</h1>
 
         <h2>I know you. But you dont know me.</h2>
 
         <h3>I want Play a game.<h3>
         <ul>
-        <li><a href="https://saruwakakun.com/">Enter</a> </li>
+        <li><a href="https://LOL.com/">Enter</a> </li>
         <li><a href="#" onClick="window.close();">Leave</a> </li>
         </ul>
         
         <p>Made by GODPOTATO</p>
+
+        <h1>Choose NOW</h1>
+
+        <h1><font color="red">Time left <span id="countdowntimer">10 </span> Seconds</font></h1>
+
+        <script type="text/javascript">
+            var timeleft = 10;
+            var downloadTimer = setInterval(function(){
+            timeleft--;
+            document.getElementById("countdowntimer").textContent = timeleft;
+            if(timeleft <= 0) {
+                alert("GAME OVER");
+                window.close();
+            }
+            },1000);
+        </script>
+
+        <script>
+                window.onload = function() {
+                        var ele = document.documentElement;
+                        ele.requestFullscreen();			
+                };
+        </script>
 
 </body>
 </html>
